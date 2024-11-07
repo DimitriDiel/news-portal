@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @Entity
 @Builder
@@ -19,6 +21,6 @@ public class Comment {
     private Long id;
     private String author;
     private String body;
-    private String date;
+    private LocalDateTime date;
 
 }
