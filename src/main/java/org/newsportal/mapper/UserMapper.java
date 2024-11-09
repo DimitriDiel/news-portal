@@ -28,6 +28,7 @@ public class UserMapper {
     public User toUser(UserRequestDto request) {
         return User.builder()
                 .username(request.getUsername())
+                .password(request.getPassword())
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
                 .email(request.getEmail())
