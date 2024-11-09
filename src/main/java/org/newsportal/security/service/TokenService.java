@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class TokenService {
+
     private final RoleRepository roleRepository;
     private SecretKey accessKey;
     private SecretKey refreshKey;
