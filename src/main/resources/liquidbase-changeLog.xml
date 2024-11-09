@@ -11,7 +11,7 @@
                 <constraints primaryKey="true"/>
             </column>
             <column name="title" type="VARCHAR (255)" />
-            <column name="author" type="VARCHAR (255)" />
+            <column name="user_id" type="JAVA.LANG.LONG" />
             <column name="content" type="TEXT" />
             <column name="url" type="TEXT" />
             <column name="thumbnail" type="TEXT" />
@@ -24,9 +24,10 @@
             <column name="id" type="JAVA.LANG.LONG" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="author" type="VARCHAR (255)" />
+            <column name="user_id" type="JAVA.LANG.LONG" />
             <column name="body" type="TEXT" />
             <column name="date" type="DATE" />
+            <column name="article_id" type="JAVA.LANG.LONG" />
         </createTable>
     </changeSet>
 
@@ -51,7 +52,7 @@
 
     <changeSet id="create-table-roles" author="DimitriDiel">
         <createTable tableName="roles">
-            <column name="id" type="bigint" autoIncrement="true">
+            <column name="id" type="JAVA.LANG.LONG" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
             <column name="title" type="varchar(32)">
@@ -62,13 +63,13 @@
 
     <changeSet id="create-table-user-role" author="DimitriDiel">
         <createTable tableName="user_role">
-            <column name="id" type="bigint" autoIncrement="true">
+            <column name="id" type="JAVA.LANG.LONG" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="user_id" type="bigint">
+            <column name="user_id" type="JAVA.LANG.LONG">
                 <constraints nullable="false" />
             </column>
-            <column name="role_id" type="bigint">
+            <column name="role_id" type="JAVA.LANG.LONG">
                 <constraints nullable="false"/>
             </column>
         </createTable>

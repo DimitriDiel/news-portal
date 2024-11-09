@@ -13,7 +13,6 @@ public class ArticleMapper {
     public Article toArticle(@Valid ArticleRequest request) {
         return Article.builder()
                 .title(request.title())
-                .author(request.author())
                 .content(request.content())
                 .url(request.url())
                 .thumbnail(request.thumbnail())

@@ -31,10 +31,7 @@ public class UserController {
     @GetMapping
     ResponseEntity<List<UserResponseDto>> getAllUsers() {
         List<UserResponseDto> users = userService.findAllUsers();
-        if (users.isEmpty()) {
-            throw new NotFoundException("No users found.");
-        }
-        return ResponseEntity.ok(userService.findAllUsers());
+        return ResponseEntity.ok(users);
     }
 
     @DeleteMapping("/{id}")
